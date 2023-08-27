@@ -24,20 +24,30 @@ function App() {
         }
     };
 
-    const restaurantCards = restaurantData.slice(startIndex, endIndex).map(
-        (restaurantCard: RestaurantCardData, index: number) => {
+    const restaurantCards = restaurantData
+        .slice(startIndex, endIndex)
+        .map((restaurantCard: RestaurantCardData, index: number) => {
             return <RestaurantCard key={index} {...restaurantCard} />;
-        }
-    );
+        });
 
     return (
         <div className="app">
             <Navbar />
             <section className="card-container">{restaurantCards}</section>
             <div className="footer">
-                {currPage !== 1 && <button onClick={handlePrevPage} className="page-button">Previous</button >}
-                <span className="page-number">{currPage}/{totalPages}</span>
-                {currPage !== totalPages && <button onClick={handleNextPage} className="page-button">Next</button>}
+                {currPage !== 1 && (
+                    <button onClick={handlePrevPage} className="page-button">
+                        Previous
+                    </button>
+                )}
+                <span className="page-number">
+                    {currPage}/{totalPages}
+                </span>
+                {currPage !== totalPages && (
+                    <button onClick={handleNextPage} className="page-button">
+                        Next
+                    </button>
+                )}
             </div>
         </div>
     );

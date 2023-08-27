@@ -3,7 +3,7 @@ import { RestaurantCardData } from "../entities/RestaurantCardData";
 function RestaurantCard(props: RestaurantCardData) {
     const yelpRedirect = () => {
         window.open(props.url, "_blank");
-    }
+    };
 
     return (
         <div className="card">
@@ -13,7 +13,11 @@ function RestaurantCard(props: RestaurantCardData) {
                 <span>{props.avg_rating}</span>
                 <span className="gray">({props.review_count})</span>
             </div>
-            <img className="card-img" src={props.image_url} onClick={yelpRedirect} />
+            <img
+                className="card-img"
+                src={props.image_url}
+                onClick={yelpRedirect}
+            />
         </div>
     );
 }
