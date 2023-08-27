@@ -1,27 +1,27 @@
 # Restaurant Week Helper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An easy way to browse the restaurants available for Restaurant Week in the DMV | [ramw](https://www.ramw.org/restaurantweek)
 
-Currently, two official plugins are available:
+## Note:
+Please use and modify the [scraper](https://github.com/kaneru-soju/restaurant-week-scraper) to supply data for this webpage to work. The included data is for DC restaurant week Aug 28 2023 - Sep 3 2023.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+## Install:
+```sh
+git clone https://github.com/kaneru-soju/restaurant-week-helper.git
+cd restaurant-week-helper
+npm install # or yarn
+npm run dev # or yarn dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Usage:
+View each card and click on the image if you wish to see the Yelp page for that restaurant.
+
+## Technologies:
+- Vite
+- React
+- TypeScript
+- HTML
+- CSS
+
+## TODO:
+- Paginate the restaurants, so the webpage is not so long. This will save memory in the browser by not loading all the links and images
