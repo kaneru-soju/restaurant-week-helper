@@ -9,7 +9,7 @@ function Navbar() {
             <h1 className="nav-text">
                 Restaurant Week |{" "}
                 <span className="nav-link" onClick={getWebsite}>
-                    DC
+                    DMV
                 </span>
             </h1>
         </nav>
