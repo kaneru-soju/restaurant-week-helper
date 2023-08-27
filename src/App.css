@@ -1,5 +1,4 @@
 :root {
-    --gray: #918E9B;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
@@ -21,16 +20,29 @@ body {
     margin: 0;
     padding: 0;
     cursor: default;
+    background: rgb(255 253 239);
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+.app {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .gray {
-    color: var(--gray);
+    color: #918E9B;
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    background: linear-gradient( to right, rgb(221, 78, 80),  rgb(216 125 123));
+    background: linear-gradient(to right, rgb(221, 78, 80), rgb(216 125 123));
     height: 125px;
     padding: 20px;
     box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
@@ -51,22 +63,24 @@ body {
 }
 
 .nav-link:hover {
-    cursor: pointer;  
+    cursor: pointer;
     text-decoration: underline;
 }
 
 .card-container {
-    background: rgb(255 253 239);
+    height: 100%;
+    min-height: 0px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
+    overflow-y: scroll;
 }
 
 .card {
     background-color: rgb(254, 226, 212);
-    width: 175px;
-    font-size: 12px;
+    font-size: 16px;
     flex: 1 1 25%;
     display: flex;
     flex-direction: column;
@@ -74,7 +88,7 @@ body {
     position: relative;
     border-radius: 9px;
     box-shadow: 0px 5px 10px 0px rgb(219, 217, 217);
-    padding: 0 0 20px 0;
+    padding-bottom: 9px;
 }
 
 .card-img {
@@ -83,7 +97,6 @@ body {
     height: 250px;
     object-fit: cover;
     border-radius: 9px;
-    margin-top: 9px;
     margin-bottom: 9px;
     cursor: pointer;
     user-select: none;
@@ -93,12 +106,11 @@ body {
     box-shadow: 0px 0px 10px 2px grey;
 }
 
-
 .card-stats {
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 16px;
+    white-space: pre;
 }
 
 .card-star {
@@ -108,6 +120,7 @@ body {
 .card-title {
     font-weight: 700;
     font-size: 22px;
+    padding: 9px 0px;
 }
 
 .footer {
@@ -120,6 +133,7 @@ body {
 }
 
 .page-button {
+    background-color: #fee2d4;
     border: none;
     padding: 10px 25px;
     border-radius: 10px;
@@ -134,4 +148,21 @@ body {
 .page-number {
     padding: 10px 25px;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+
+    .card-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .card-title {
+        font-size: 18px;
+    }
 }

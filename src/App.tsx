@@ -31,7 +31,7 @@ function App() {
     );
 
     return (
-        <div>
+        <div className="app">
             <Navbar />
             <section className="card-container">{restaurantCards}</section>
             <div className="footer">
