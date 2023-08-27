@@ -20,6 +20,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    cursor: default;
 }
 
 .gray {
@@ -45,7 +46,8 @@ body {
 .nav-text {
     color: white;
     font-size: 36px;
-    text-shadow: 1px 1px 2px maroon;
+    text-shadow: 1px 1px 7px maroon;
+    user-select: none;
 }
 
 .nav-link:hover {
@@ -54,6 +56,7 @@ body {
 }
 
 .card-container {
+    background: rgb(255 253 239);
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -61,6 +64,7 @@ body {
 }
 
 .card {
+    background-color: rgb(254, 226, 212);
     width: 175px;
     font-size: 12px;
     flex: 1 1 25%;
@@ -74,14 +78,21 @@ body {
 }
 
 .card-img {
-    width: 550px;
-    height: 400px;
+    max-width: 80%;
+    width: 400px;
+    height: 250px;
     object-fit: cover;
     border-radius: 9px;
     margin-top: 9px;
     margin-bottom: 9px;
     cursor: pointer;
+    user-select: none;
 }
+
+.card-img:hover {
+    box-shadow: 0px 0px 10px 2px grey;
+}
+
 
 .card-stats {
     display: flex;
@@ -97,4 +108,30 @@ body {
 .card-title {
     font-weight: 700;
     font-size: 22px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    padding: 20px;
+    user-select: none;
+
+}
+
+.page-button {
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgb(219, 217, 217);
+}
+
+.page-button:hover {
+    cursor: pointer;
+    background: rgb(190 213 222);
+}
+
+.page-number {
+    padding: 10px 25px;
+    text-align: center;
 }
